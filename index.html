@@ -1,114 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZDSPGC - Zamboanga Del Sur Provincial Government College</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header id="home">
-    <div class="logo">
-      <h1>ZDSPGC</h1>
-      <p>Zamboanga Del Sur Provincial Government College</p>
-      <p>Excellence in Education, Service to Community</p>
-      <a href="#courses" class="cta-button">Explore Programs</a>
+  <header id="home" class="h-screen bg-cover bg-center flex items-center justify-center text-center px-6" style="background-image:url('https://source.unsplash.com/1600x900/?university,education');">
+    <div class="bg-black/50 p-10 rounded-xl shadow-xl text-white max-w-2xl">
+      <h1 class="text-5xl font-bold mb-2 tracking-wide">ZDSPGC</h1>
+      <p class="text-lg">Zamboanga Del Sur Provincial Government College</p>
+      <p class="text-sm mb-6 opacity-80">Excellence in Education, Service to Community</p>
+      <a href="#courses" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition rounded-lg font-semibold">Explore Programs</a>
     </div>
   </header>
 
   <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <div class="nav-logo">ZDSPGC</div>
-      <div class="nav-toggle" id="mobile-menu">&#9776;</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#admissions">Admissions</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <nav class="bg-white shadow fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      <div class="text-xl font-bold text-blue-700">ZDSPGC</div>
+      <div class="md:hidden text-3xl cursor-pointer" onclick="toggleMenu()">&#9776;</div>
+      <ul id="menu" class="hidden md:flex space-x-8 font-medium">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#courses" class="hover:text-blue-600">Courses</a></li>
+        <li><a href="#admissions" class="hover:text-blue-600">Admissions</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
       </ul>
     </div>
+    <ul id="mobileMenu" class="md:hidden hidden flex-col bg-white shadow px-6 py-4 space-y-3 font-medium">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#admissions">Admissions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
   <!-- Courses Section -->
-  <section id="courses" class="courses">
-    <div class="container">
-      <h2>Our Major Courses</h2>
-      <div class="course-cards">
+  <section id="courses" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Major Courses</h2>
+
+      <div class="grid md:grid-cols-3 gap-10">
+
         <!-- BSIS -->
-        <div class="course-card">
-          <div class="course-img" style="background-image:url('https://source.unsplash.com/random/600x400/?technology,computer');"></div>
-          <div class="course-content">
-            <h3>Bachelor of Science in Information System (BSIS)</h3>
-            <p>IT professionals training in designing, implementing, and managing information systems.</p>
-            <a class="course-button" href="#">Learn More</a>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+          <div class="h-48 bg-cover" style="background-image:url('https://source.unsplash.com/random/600x400/?technology,computer');"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Bachelor of Science in Information System (BSIS)</h3>
+            <p class="text-sm mb-4">IT professionals training in designing, implementing, and managing information systems.</p>
+            <a class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Learn More</a>
           </div>
         </div>
+
         <!-- ACT -->
-        <div class="course-card">
-          <div class="course-img" style="background-image:url('https://source.unsplash.com/random/600x400/?network,technology');"></div>
-          <div class="course-content">
-            <h3>Associate in Computer Technology (ACT)</h3>
-            <p>A 2-year program on computer hardware, networking, and programming.</p>
-            <a class="course-button" href="#">Learn More</a>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+          <div class="h-48 bg-cover" style="background-image:url('https://source.unsplash.com/random/600x400/?network,technology');"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Associate in Computer Technology (ACT)</h3>
+            <p class="text-sm mb-4">A 2-year program on computer hardware, networking, and programming.</p>
+            <a class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Learn More</a>
           </div>
         </div>
+
         <!-- BPED -->
-        <div class="course-card">
-          <div class="course-img" style="background-image:url('https://source.unsplash.com/random/600x400/?sports,physical-education');"></div>
-          <div class="course-content">
-            <h3>Bachelor of Physical Education (BPED)</h3>
-            <p>Develops teachers specializing in sports, fitness, and wellness.</p>
-            <a class="course-button" href="#">Learn More</a>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+          <div class="h-48 bg-cover" style="background-image:url('https://source.unsplash.com/random/600x400/?sports,physical-education');"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Bachelor of Physical Education (BPED)</h3>
+            <p class="text-sm mb-4">Develops teachers specializing in sports, fitness, and wellness.</p>
+            <a class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Learn More</a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About ZDSPGC</h2>
-      <p>Providing quality, relevant, and affordable education for the youth of Zamboanga del Sur.</p>
-      <p>Modern facilities and committed faculty prepare students for global competitiveness.</p>
-      <a href="#" class="cta-button">Discover More</a>
+  <section id="about" class="py-20 bg-blue-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">About ZDSPGC</h2>
+      <p class="text-gray-700 max-w-3xl mx-auto mb-4">Providing quality, relevant, and affordable education for the youth of Zamboanga del Sur.</p>
+      <p class="text-gray-700 max-w-3xl mx-auto mb-8">Modern facilities and committed faculty prepare students for global competitiveness.</p>
+      <a href="#" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Discover More</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="contact">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>ZDSPGC</h3>
-          <p>Committed to excellence in education and service to the community.</p>
-        </div>
-        <div class="footer-column">
-          <h3>Contact Us</h3>
-          <p>Provincial Government Complex, Dao, Pagadian City</p>
-          <p>Phone: (062) 123-4567</p>
-          <p>Email: info@zdspgc.edu.ph</p>
-        </div>
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#courses">Courses</a>
-          <a href="#admissions">Admissions</a>
-          <a href="#contact">Contact</a>
-        </div>
+  <footer id="contact" class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-white">ZDSPGC</h3>
+        <p>Committed to excellence in education and service to the community.</p>
       </div>
-      <div class="copyright">
-        <p>© 2023 Zamboanga Del Sur Provincial Government College. All Rights Reserved.</p>
+
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-white">Contact Us</h3>
+        <p>Provincial Government Complex, Dao, Pagadian City</p>
+        <p>Phone: (062) 123-4567</p>
+        <p>Email: info@zdspgc.edu.ph</p>
       </div>
+
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-white">Quick Links</h3>
+        <ul class="space-y-1">
+          <li><a href="#home" class="hover:text-white">Home</a></li>
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#courses" class="hover:text-white">Courses</a></li>
+          <li><a href="#admissions" class="hover:text-white">Admissions</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
     </div>
+
+    <div class="text-center text-sm text-gray-400 mt-10">© 2023 Zamboanga Del Sur Provincial Government College. All Rights Reserved.</div>
   </footer>
 
-  <script src="js/script.js"></script>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+</script>
+
 </body>
 </html>
-
